@@ -1,6 +1,8 @@
-body {
+html {
     font-family: "Playfair Display";
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
+    background-color: #262626;
+    color: #f3f3f3
 }
