@@ -3,201 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAQUE - Colección Primavera</title>
+    <title>JAQUE - Elegancia Atemporal</title>
+    <link rel="stylesheet" href="./static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./static/css/style.css" >
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
-
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header de la pagina (repetir en las otras secciones) -->
     <header>
-        <div class="logo">
-            <div class="logo-image">
-                <img src="./static/images/logo.png" class="header-logo-img">
+        <a href="index.html" class="no-decoration">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="./static/images/logo.png" class="header-logo-img">
+                </div>
+                <div class="logo-text">JAQUE</div>
             </div>
-            <div class="logo-text">JAQUE</div>
-        </div>
+        </a>
+
         <nav>
             <ul>
-                <li><a href="#colecciones">Colecciones</a></li>
+                <li class="dropdown">
+                    <a>Colecciones</a>
+                    <div class="dropdown-content">
+                        <a href="autumn_collection.html">Otoño</a>
+                        <a href="spring_collection.html">Primavera</a>
+                        <a href="summer_collection.html">Verano</a>
+                    </div>
+                </li>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Banner -->
-    <section class="hero-banner spring">
-        <div>
-            <h1>Primavera 2025</h1>
-            <p>Renovación y Sofisticación</p>
-        </div>
-    </section>
-
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <a href="#home">Inicio</a>
-        <span>/</span>
-        <a href="#colecciones">Colecciones</a>
-        <span>/</span>
-        <span>Primavera</span>
+    <main>
+        
+<!-- Hero Banner -->
+<section class="hero-banner spring">
+    <div>
+        <h1>Primavera 2025</h1>
+        <p>Renovación y Sofisticación</p>
     </div>
+</section>
 
-    <!-- Collection Description -->
-    <section class="collection-description">
-        <h2>Colección Primavera</h2>
-        <p>Descubre nuestra nueva colección primavera que celebra la elegancia contemporánea. Piezas diseñadas con tejidos premium y cortes impecables que reflejan sofisticación en cada detalle.</p>
-    </section>
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+    <a href="#home">Inicio</a>
+    <span>/</span>
+    <a href="#colecciones">Colecciones</a>
+    <span>/</span>
+    <span>Primavera</span>
+</div>
 
-    <!-- Filter Bar -->
-    <div class="filter-bar">
-        <div class="filter-group">
-            <label>Ordenar por:</label>
-            <select>
-                <option>Más reciente</option>
-                <option>Precio: menor a mayor</option>
-                <option>Precio: mayor a menor</option>
-                <option>Nombre: A-Z</option>
-            </select>
+<!-- Collection Description -->
+<section class="collection-description">
+    <h2>Colección Primavera</h2>
+    <p>Descubre nuestra nueva colección primavera que celebra la elegancia contemporánea. Piezas diseñadas con tejidos premium y cortes impecables que reflejan sofisticación en cada detalle.</p>
+</section>
+
+<!-- Filter Bar -->
+<div class="filter-bar">
+    <div class="filter-group">
+        <label>Ordenar por:</label>
+        <select>
+            <option>Más reciente</option>
+            <option>Precio: menor a mayor</option>
+            <option>Precio: mayor a menor</option>
+            <option>Nombre: A-Z</option>
+        </select>
+    </div>
+    <div class="filter-group">
+        <label>Categoría:</label>
+        <select>
+            <option>Todas</option>
+            <option>Vestidos</option>
+            <option>Blazers</option>
+            <option>Pantalones</option>
+            <option>Blusas</option>
+            <option>Faldas</option>
+        </select>
+    </div>
+</div>
+
+<!-- Products -->
+<section class="product-section">
+    <h2 class="section-title">Vestidos</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image">
+                ♕
+                <div class="product-badge">Nuevo</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">Vestido Midi Elegante</div>
+                <div class="product-price">$12,500</div>
+            </div>
         </div>
-        <div class="filter-group">
-            <label>Categoría:</label>
-            <select>
-                <option>Todas</option>
-                <option>Vestidos</option>
-                <option>Blazers</option>
-                <option>Pantalones</option>
-                <option>Blusas</option>
-                <option>Faldas</option>
-            </select>
+        <div class="product-card">
+            <div class="product-image">♕</div>
+            <div class="product-info">
+                <div class="product-name">Vestido Cóctel Clásico</div>
+                <div class="product-price">$15,800</div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">♕</div>
+            <div class="product-info">
+                <div class="product-name">Vestido Largo Fluido</div>
+                <div class="product-price">$18,900</div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                ♕
+                <div class="product-badge">Nuevo</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">Vestido Asimétrico</div>
+                <div class="product-price">$14,200</div>
+            </div>
         </div>
     </div>
+</section>
 
-    <!-- Products -->
-    <section class="product-section">
-        <h2 class="section-title">Vestidos</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">
-                    ♕
-                    <div class="product-badge">Nuevo</div>
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Vestido Midi Elegante</div>
-                    <div class="product-price">$12,500</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">♕</div>
-                <div class="product-info">
-                    <div class="product-name">Vestido Cóctel Clásico</div>
-                    <div class="product-price">$15,800</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">♕</div>
-                <div class="product-info">
-                    <div class="product-name">Vestido Largo Fluido</div>
-                    <div class="product-price">$18,900</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    ♕
-                    <div class="product-badge">Nuevo</div>
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Vestido Asimétrico</div>
-                    <div class="product-price">$14,200</div>
-                </div>
+<section class="product-section" style="background-color: #f8f8f8;">
+    <h2 class="section-title">Blazers</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image">♔</div>
+            <div class="product-info">
+                <div class="product-name">Blazer Sastre Negro</div>
+                <div class="product-price">$16,500</div>
             </div>
         </div>
-    </section>
-
-    <section class="product-section" style="background-color: #f8f8f8;">
-        <h2 class="section-title">Blazers</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">♔</div>
-                <div class="product-info">
-                    <div class="product-name">Blazer Sastre Negro</div>
-                    <div class="product-price">$16,500</div>
-                </div>
+        <div class="product-card">
+            <div class="product-image">
+                ♔
+                <div class="product-badge">Nuevo</div>
             </div>
-            <div class="product-card">
-                <div class="product-image">
-                    ♔
-                    <div class="product-badge">Nuevo</div>
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Blazer Oversize Blanco</div>
-                    <div class="product-price">$17,800</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">♔</div>
-                <div class="product-info">
-                    <div class="product-name">Blazer Cruzado</div>
-                    <div class="product-price">$19,200</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">♔</div>
-                <div class="product-info">
-                    <div class="product-name">Blazer Lino Natural</div>
-                    <div class="product-price">$15,600</div>
-                </div>
+            <div class="product-info">
+                <div class="product-name">Blazer Oversize Blanco</div>
+                <div class="product-price">$17,800</div>
             </div>
         </div>
-    </section>
-
-    <section class="product-section">
-        <h2 class="section-title">Pantalones</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">♖</div>
-                <div class="product-info">
-                    <div class="product-name">Pantalón Palazzo</div>
-                    <div class="product-price">$11,900</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">♖</div>
-                <div class="product-info">
-                    <div class="product-name">Pantalón Recto Clásico</div>
-                    <div class="product-price">$10,500</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    ♖
-                    <div class="product-badge">Nuevo</div>
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Pantalón Wide Leg</div>
-                    <div class="product-price">$12,800</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">♖</div>
-                <div class="product-info">
-                    <div class="product-name">Pantalón Cigarette</div>
-                    <div class="product-price">$11,200</div>
-                </div>
+        <div class="product-card">
+            <div class="product-image">♔</div>
+            <div class="product-info">
+                <div class="product-name">Blazer Cruzado</div>
+                <div class="product-price">$19,200</div>
             </div>
         </div>
-    </section>
+        <div class="product-card">
+            <div class="product-image">♔</div>
+            <div class="product-info">
+                <div class="product-name">Blazer Lino Natural</div>
+                <div class="product-price">$15,600</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <h2>Agenda tu Cita Personal</h2>
-        <p>Experimenta el servicio exclusivo de JAQUE</p>
-        <a href="#contacto" class="cta-button">Contactar</a>
-    </section>
+<section class="product-section">
+    <h2 class="section-title">Pantalones</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image">♖</div>
+            <div class="product-info">
+                <div class="product-name">Pantalón Palazzo</div>
+                <div class="product-price">$11,900</div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">♖</div>
+            <div class="product-info">
+                <div class="product-name">Pantalón Recto Clásico</div>
+                <div class="product-price">$10,500</div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                ♖
+                <div class="product-badge">Nuevo</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">Pantalón Wide Leg</div>
+                <div class="product-price">$12,800</div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">♖</div>
+            <div class="product-info">
+                <div class="product-name">Pantalón Cigarette</div>
+                <div class="product-price">$11,200</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Footer -->
+<!-- CTA Section -->
+<section class="cta-section">
+    <h2>Agenda tu Cita Personal</h2>
+    <p>Experimenta el servicio exclusivo de JAQUE</p>
+    <a href="#contacto" class="cta-button">Contactar</a>
+</section>
+
+    </main>
+
+    <!-- Footer (tambien en todos los templates) -->
     <footer id="contacto">
         <div class="footer-content">
             <div class="footer-logo">JAQUE</div>

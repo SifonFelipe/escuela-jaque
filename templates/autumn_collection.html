@@ -1,48 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAQUE - Elegancia Atemporal</title>
-    <link rel="stylesheet" href="./static/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Header de la pagina (repetir en las otras secciones) -->
-    <header>
-        <a href="index.html" class="no-decoration">
-            <div class="logo">
-                <div class="logo-image">
-                    <img src="./static/images/logo.png" class="header-logo-img">
-                </div>
-                <div class="logo-text">JAQUE</div>
-            </div>
-        </a>
+{% extends 'main.html' %}
 
-        <nav>
-            <ul>
-                <li class="dropdown">
-                    <a>Colecciones</a>
-                    <div class="dropdown-content">
-                        <a href="autumn_collection.html">Otoño</a>
-                        <a href="spring_collection.html">Primavera</a>
-                        <a href="summer_collection.html">Verano</a>
-                    </div>
-                </li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        
+{% block content %}
 <!-- Hero Banner -->
-<section class="hero-banner summer">
+<section class="hero-banner autumn">
     <div>
-        <h1>Verano 2025</h1>
+        <h1>Otoño 2025</h1>
         <p>Renovación y Sofisticación</p>
     </div>
 </section>
@@ -208,25 +170,5 @@
     <a href="#contacto" class="cta-button">Contactar</a>
 </section>
 
-    </main>
 
-    <!-- Footer (tambien en todos los templates) -->
-    <footer id="contacto">
-        <div class="footer-content">
-            <div class="footer-logo">JAQUE</div>
-            <div class="footer-links">
-                <a href="#colecciones">Colecciones</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#contacto">Contacto</a>
-                <a href="#">Tiendas</a>
-            </div>
-            <div class="social-icons">
-                <a href="#" class="social-icon">f</a>
-                <a href="#" class="social-icon">i</a>
-                <a href="#" class="social-icon">p</a>
-            </div>
-            <p class="copyright">© 2025 JAQUE. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-</body>
-</html>
+{% endblock content %}

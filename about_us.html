@@ -8,35 +8,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-   </style>
 </head>
 <body>
     <!-- Header de la pagina (repetir en las otras secciones) -->
     <header>
-        <div class="logo">
-            <div class="logo-image">
-                <img src="./static/images/logo.png" class="header-logo-img">
+        <a href="index.html" class="no-decoration">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="./static/images/logo.png" class="header-logo-img">
+                </div>
+                <div class="logo-text">JAQUE</div>
             </div>
-            <div class="logo-text">JAQUE</div>
-        </div>
+        </a>
+
         <nav>
             <ul>
-                <li><a href="#colecciones">Colecciones</a></li>
+                <li class="dropdown">
+                    <a>Colecciones</a>
+                    <div class="dropdown-content">
+                        <a href="autumn_collection.html">Otoño</a>
+                        <a href="spring_collection.html">Primavera</a>
+                        <a href="summer_collection.html">Verano</a>
+                    </div>
+                </li>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="about" id="nosotros">
-        <h2 class="section-title">Nuestra Filosofía</h2>
-        <div class="about-content">
-            <p>En JAQUE, creemos que la elegancia es atemporal. Cada pieza es cuidadosamente diseñada para reflejar sofisticación y exclusividad.</p>
-            <p>Nuestras colecciones fusionan la artesanía tradicional con diseños contemporáneos, creando prendas que trascienden tendencias y definen el verdadero estilo.</p>
-        </div>
+    <main>
+        
+<section class="about" id="nosotros">
+    <h2 class="section-title">Nuestra Filosofía</h2>
+    <div class="about-content">
+        <p>En JAQUE, creemos que la elegancia es atemporal. Cada pieza es cuidadosamente diseñada para reflejar sofisticación y exclusividad.</p>
+        <p>Nuestras colecciones fusionan la artesanía tradicional con diseños contemporáneos, creando prendas que trascienden tendencias y definen el verdadero estilo.</p>
+    </div>
 
-    </section>
+</section>
+
+
+
+    </main>
 
     <!-- Footer (tambien en todos los templates) -->
     <footer id="contacto">
