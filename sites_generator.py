@@ -17,3 +17,4 @@ for template_path in TEMPLATES_DIR.glob("*.html"):
     output_file.write_text(rendered, encoding="utf-8")
 
     print(f"generated {template_path.name}")
+

@@ -1,0 +1,110 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<!-- Hero Banner -->
+<section class="hero-banner">
+    <div>
+        <h1>CONTACTO</h1>
+        <p>Estamos aquí para ti</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <!-- Contact Info -->
+    <div class="contact-info">
+        <h2>Hablemos</h2>
+        <p>Completa el formulario y nuestro equipo se pondrá en contacto contigo para brindarte una experiencia personalizada.</p>
+        
+        <div class="contact-details">
+            <div class="contact-item">
+                <h3>Showroom</h3>
+                <p>Av. Córdoba 1234, Piso 5</p>
+                <p>Buenos Aires, Argentina</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Teléfono</h3>
+                <p>+54 11 5555-1234</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>contacto@jaque.com.ar</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Horarios</h3>
+                <p>Lunes a Viernes: 10:00 - 19:00</p>
+                <p>Sábados: 10:00 - 14:00</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h3 class="form-title">Agenda tu Consulta</h3>
+        <form id="contactForm">
+            <!-- Campo 1: Texto (Nombre) -->
+            <div class="form-group">
+                <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
+            </div>
+
+            <!-- Campo 2: Email -->
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+
+            <!-- Campo 3: Teléfono -->
+            <div class="form-group">
+                <label for="telefono">Teléfono <span class="required">*</span></label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="+54 11 1234-5678">
+            </div>
+
+            <!-- Campo 4: Select (Motivo de consulta) -->
+            <div class="form-group">
+                <label for="motivo">Motivo de Consulta <span class="required">*</span></label>
+                <select id="motivo" name="motivo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="asesoria">Asesoría Personal de Estilo</option>
+                    <option value="medidas">Confección a Medida</option>
+                    <option value="evento">Consulta para Evento</option>
+                    <option value="catalogo">Solicitar Catálogo</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <!-- Campo 5: Date (Fecha preferida) -->
+            <div class="form-group">
+                <label for="fecha">Fecha Preferida para Cita</label>
+                <input type="date" id="fecha" name="fecha">
+            </div>
+
+            <!-- Campo 6: Textarea (Mensaje) -->
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos más sobre tu consulta..."></textarea>
+            </div>
+
+            <!-- Checkbox (Acepta newsletter) -->
+            <div class="checkbox-group">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Deseo recibir novedades y promociones exclusivas</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">Enviar Consulta</button>
+        </form>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+    <div class="map-placeholder">
+        [ MAPA DE UBICACIÓN ]
+    </div>
+</section>
+
+{% endblock content %}
