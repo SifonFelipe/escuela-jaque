@@ -2,7 +2,7 @@ from jinja2 import Environment, FileSystemLoader
 from pathlib import Path
 
 TEMPLATES_DIR = Path("templates")
-OUTPUT_DIR = Path(".")
+OUTPUT_DIR = Path("./output")
 
 env = Environment(loader=FileSystemLoader("templates"))
 
