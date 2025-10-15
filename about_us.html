@@ -31,7 +31,7 @@
                         <a href="summer_collection.html">Verano</a>
                     </div>
                 </li>
-                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="about_us.html">Nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
@@ -39,15 +39,588 @@
 
     <main>
         
-<section class="about" id="nosotros">
-    <h2 class="section-title">Nuestra Filosofía</h2>
-    <div class="about-content">
-        <p>En JAQUE, creemos que la elegancia es atemporal. Cada pieza es cuidadosamente diseñada para reflejar sofisticación y exclusividad.</p>
-        <p>Nuestras colecciones fusionan la artesanía tradicional con diseños contemporáneos, creando prendas que trascienden tendencias y definen el verdadero estilo.</p>
-    </div>
+   <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-</section>
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #fff;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
 
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.98);
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid #e0e0e0;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            background-color: #0a1628;
+            border: 2px solid #0a1628;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: #0a1628;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            font-weight: 300;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: #0a1628;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.98);
+            min-width: 180px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+            z-index: 100;
+            top: 20px;
+            left: -20px;
+            border-top: 2px solid #0a1628;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            padding: 10px 20px;
+            display: block;
+            text-align: left;
+            font-size: 14px;
+            text-transform: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .hero-banner {
+            margin-top: 90px;
+            height: 60vh;
+            background: linear-gradient(rgba(10, 22, 40, 0.7), rgba(10, 22, 40, 0.7)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%230a1628" width="1200" height="600"/><path fill="%23ffffff" d="M200 300 Q 600 100, 1000 300 T 1200 300" stroke="%23ffffff" stroke-width="2" fill="none" opacity="0.1"/></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-banner h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 400;
+            letter-spacing: 10px;
+            margin-bottom: 15px;
+        }
+
+        .hero-banner p {
+            font-size: 24px;
+            letter-spacing: 4px;
+            font-weight: 300;
+        }
+
+        .about-intro {
+            padding: 120px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-intro h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 400;
+            letter-spacing: 6px;
+            color: #0a1628;
+            margin-bottom: 40px;
+        }
+
+        .about-intro p {
+            font-size: 22px;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            color: #4a4a4a;
+            margin-bottom: 30px;
+        }
+
+        .philosophy-section {
+            background-color: #f8f8f8;
+            padding: 100px 60px;
+        }
+
+        .philosophy-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .philosophy-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            color: #0a1628;
+            margin-bottom: 30px;
+        }
+
+        .philosophy-text p {
+            font-size: 20px;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            color: #4a4a4a;
+            margin-bottom: 25px;
+        }
+
+        .philosophy-symbol {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 200px;
+            color: #0a1628;
+            opacity: 0.1;
+        }
+
+        .values-section {
+            padding: 120px 60px;
+            background-color: #fff;
+        }
+
+        .values-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 400;
+            letter-spacing: 6px;
+            color: #0a1628;
+            margin-bottom: 80px;
+        }
+
+        .values-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 40px 30px;
+        }
+
+        .value-icon {
+            font-size: 80px;
+            color: #0a1628;
+            margin-bottom: 30px;
+        }
+
+        .value-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            color: #0a1628;
+            margin-bottom: 20px;
+        }
+
+        .value-item p {
+            font-size: 18px;
+            line-height: 1.6;
+            letter-spacing: 1px;
+            color: #666;
+        }
+
+        .vision-section {
+            background-color: #0a1628;
+            padding: 120px 60px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .vision-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .vision-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 400;
+            letter-spacing: 6px;
+            margin-bottom: 40px;
+        }
+
+        .vision-content p {
+            font-size: 22px;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            color: #e0e0e0;
+            margin-bottom: 30px;
+        }
+
+        .vision-goals {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .goal-item h5 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .goal-item p {
+            font-size: 16px;
+            color: #b0b0b0;
+            letter-spacing: 1px;
+        }
+
+        .team-section {
+            padding: 120px 60px;
+            background-color: #f8f8f8;
+        }
+
+        .team-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 400;
+            letter-spacing: 6px;
+            color: #0a1628;
+            margin-bottom: 80px;
+        }
+
+        .team-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .team-content p {
+            font-size: 20px;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            color: #4a4a4a;
+            margin-bottom: 30px;
+        }
+
+        .cta-section {
+            padding: 100px 60px;
+            background-color: #0a1628;
+            text-align: center;
+            color: #fff;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 400;
+            letter-spacing: 6px;
+            margin-bottom: 30px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: all 0.4s;
+        }
+
+        .cta-button:hover {
+            background-color: #fff;
+            color: #0a1628;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 6px;
+            margin-bottom: 30px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #666;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .copyright {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: grey;
+        }
+
+        @media (max-width: 968px) {
+            header {
+                padding: 20px 30px;
+            }
+
+            .logo-text {
+                font-size: 24px;
+            }
+
+            nav ul {
+                gap: 20px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .hero-banner h1 {
+                font-size: 50px;
+                letter-spacing: 6px;
+            }
+
+            .hero-banner p {
+                font-size: 18px;
+            }
+
+            .philosophy-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .vision-goals {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-intro,
+            .values-section,
+            .team-section {
+                padding: 80px 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero-banner h1 {
+                font-size: 36px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+   <main>
+    <section class="hero-banner">
+        <div>
+            <h1>NOSOTROS</h1>
+            <p>Presencia sin estridencia</p>
+        </div>
+    </section>
+
+    <section class="about-intro">
+        <h2>Nuestra Historia</h2>
+        <p>Jaqué nace de una visión: recuperar la elegancia perdida, ese arte de vestir con intención y estrategia. En un mundo donde lo inmediato reemplazó lo atemporal, decidimos crear algo diferente.</p>
+        <p>No es solo ropa. Es una declaración de presencia. Cada prenda cuenta una historia de sofisticación, donde el detalle y el corte hablan más que cualquier etiqueta.</p>
+        <p>Inspirados en el ajedrez y su combinación de estrategia y elegancia, construimos una marca que invita a vestir con propósito, con ese equilibrio perfecto entre la delicadeza del detalle y la fuerza del diseño.</p>
+    </section>
+
+    <section class="philosophy-section">
+        <div class="philosophy-content">
+            <div class="philosophy-text">
+                <h3>Nuestra Filosofía</h3>
+                <p>Creemos que la elegancia es atemporal. No se trata de tendencias pasajeras, sino de crear piezas que trascienden el momento y definen el verdadero estilo.</p>
+                <p>Cada diseño fusiona la artesanía tradicional con la visión contemporánea, buscando ese punto donde la formalidad se encuentra con la modernidad.</p>
+                <p>No queremos que pases desapercibido. Queremos que te muevas con estrategia, que combines la delicadeza con la fuerza, que ocupes tu espacio con presencia y distinción.</p>
+            </div>
+            <div class="philosophy-symbol">♔</div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <h2 class="values-title">Nuestros Valores</h2>
+        <div class="values-grid">
+            <div class="value-item">
+                <div class="value-icon">♗</div>
+                <h4>Estrategia</h4>
+                <p>Como en el ajedrez, cada movimiento cuenta. Cada prenda está pensada para acompañarte en tu día con propósito y estilo.</p>
+            </div>
+            <div class="value-item">
+                <div class="value-icon">♕</div>
+                <h4>Elegancia</h4>
+                <p>La sofisticación no grita. Se muestra con confianza, respeto y un diseño que habla por sí solo.</p>
+            </div>
+            <div class="value-item">
+                <div class="value-icon">♘</div>
+                <h4>Calidad</h4>
+                <p>Cada detalle importa. Desde la selección de telas hasta el último acabado, buscamos la excelencia en cada pieza.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="vision-section">
+        <div class="vision-content">
+            <h3>Nuestra Visión</h3>
+            <p>Jaqué busca ser un referente internacional de elegancia. Un sello distintivo en el mundo de la moda que impulsa el renacimiento de la formalidad con un enfoque provocador.</p>
+            <p>Más que una marca, queremos ser un movimiento que redefine el poder del vestir como herramienta de presencia, identidad y respeto.</p>
+            
+            <div class="vision-goals">
+                <div class="goal-item">
+                    <h5>Corto Plazo</h5>
+                    <p>Presencia en desfiles internacionales, representando elegancia estratégica</p>
+                </div>
+                <div class="goal-item">
+                    <h5>Mediano Plazo</h5>
+                    <p>Expansión hacia línea femenina, democratizando la sofisticación</p>
+                </div>
+                <div class="goal-item">
+                    <h5>Largo Plazo</h5>
+                    <p>Sedes en Milán, París, New York y Buenos Aires</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <h2 class="team-title">Nuestro Equipo</h2>
+        <div class="team-content">
+            <p>Detrás de Jaqué hay un equipo apasionado por el diseño, la calidad y la atención al detalle. Diseñadores, sastres, y creativos que comparten una misma visión: devolver la elegancia a su lugar de honor.</p>
+            <p>Trabajamos con artesanos que entienden que cada costura, cada tela y cada corte son parte de una experiencia más grande. Porque en Jaqué, no solo creamos ropa, creamos declaraciones de estilo.</p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Únete al Movimiento</h2>
+        <p>Descubre cómo Jaqué puede transformar tu forma de vestir</p>
+        <a href="contacto.html" class="cta-button">Contáctanos</a>
+    </section>
+</main>
 
 
     </main>
@@ -57,10 +630,9 @@
         <div class="footer-content">
             <div class="footer-logo">JAQUE</div>
             <div class="footer-links">
-                <a href="#colecciones">Colecciones</a>
-                <a href="#nosotros">Nosotros</a>
+                <a href="index.html#colecciones">Colecciones</a>
+                <a href="about_us.html">Nosotros</a>
                 <a href="contacto.html">Contacto</a>
-                <a href="#">Tiendas</a>
             </div>
             <div class="social-icons">
                 <a href="#" class="social-icon">f</a>
